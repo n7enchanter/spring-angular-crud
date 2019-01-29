@@ -1,0 +1,34 @@
+<form  [formGroup]="app.form"  >
+  <mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile>
+      <div >
+        <input  type="hidden" formControlName="empID">
+        <mat-form-field>
+          <input formControlName="empName"  matInput laceholder="Employee" [disabled]="true" >
+          <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div >
+        <div >
+          <mat-checkbox formControlName="empActive"></mat-checkbox>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+        <mat-form-field>
+          <mat-select  formControlName="department" placeholder="Department">
+              <mat-option   *ngFor="let department of departmentList" [value]="department.depID">{{department.depName}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div >
+          <button [disabled]=" app.form.invalid || isView"  mat-raised-button color="primary" type="submit" (click)="submit()" >Submit</button>
+          <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

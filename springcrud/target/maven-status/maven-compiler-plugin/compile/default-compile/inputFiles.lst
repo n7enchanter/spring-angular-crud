@@ -1,0 +1,12 @@
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/SpringcrudApplication.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/controller/EmployeeController.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/entity/Employee.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/controller/DepartmentController.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/entity/Department.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/dao/DepartmentRepository.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/dao/EmployeeRepository.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/service/Views.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/service/DepartmentServiceImpl.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/service/EmployeeServiceImpl.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/service/EmployeeService.java
+/home/dpcinder/IdeaProjects/test/springcrud/src/main/java/com/ukeess/springcrud/service/DepartmentService.java

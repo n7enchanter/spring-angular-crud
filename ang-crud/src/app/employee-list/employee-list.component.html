@@ -1,0 +1,40 @@
+<div class="form-page">
+  <form [formGroup]="form">
+
+    <mat-form-field class="inp_back">
+      <input
+        matInput
+        placeholder="EmpName"
+        (change)="str"
+        formControlName="empName" required>
+    </mat-form-field>
+
+    <div class="form-button">
+
+      <button
+        mat-raised-button
+        (click)="save()">Submit
+      </button>
+
+      <button style=" margin: 1%;"
+        mat-raised-button
+        (click)="cancel()">Cancel
+      </button>
+
+    </div>
+  </form>
+ <div> <button
+   mat-raised-button
+   color="primary"
+   (click)="onCreate()">
+   Add
+ </button></div>
+<app-employee *ngIf="showData"
+  [employees]="employeeList"
+  (EditEvent)="editEmployee($event)"
+  (DeleteEvent)="deleteEmployee($event)"
+(ViewEvent)="viewEmployee($event)">
+</app-employee>
+  </div>
+
+
