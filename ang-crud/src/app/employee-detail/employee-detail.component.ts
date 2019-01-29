@@ -30,13 +30,13 @@ export class EmployeeDetailComponent implements OnInit {
     );
   }
 
-  submit() {
+ submit() {
+    this.employee.empID = this.app.form.value.empID;
     this.employee.empName = this.app.form.value.empName;
     this.employee.empActive = this.app.form.value.empActive;
     this.department.depID = this.app.form.value.department;
     this.employee.department = this.department;
     this.app.saveUpdateEmployee(this.employee).subscribe()
-    //this.rout.navigate(['employees']);
     this.onClose();
 
   }
