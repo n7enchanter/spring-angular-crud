@@ -33,3 +33,8 @@
 ![screenshot from 2019-01-29 16-50-48](https://user-images.githubusercontent.com/17470991/51917132-89edee80-23e7-11e9-9e64-94bbcce0ba3a.png)
 
 * You can delete your 'Employee' by pressing “delete” button
+
+# [UPDATE]
+
+* Paginator now has the ability to manualy change the page
+![image](https://user-images.githubusercontent.com/17470991/52118906-416d4580-2620-11e9-9bf7-bc0496299fe8.png)
