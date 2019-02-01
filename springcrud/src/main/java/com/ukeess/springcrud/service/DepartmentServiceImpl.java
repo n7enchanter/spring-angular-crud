@@ -1,6 +1,7 @@
 package com.ukeess.springcrud.service;
 
 import com.ukeess.springcrud.dao.DepartmentRepository;
+import com.ukeess.springcrud.dto.DepartmentDTO;
 import com.ukeess.springcrud.entity.Department;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,34 +16,19 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Transactional
     @Override
-    public List<Department> findAll() {
-        return departmentRepository.findAll();
+    public List<DepartmentDTO> findAll() {
+        List<Department> departments = departmentRepository.findAll();
+        List<DepartmentDTO> departmentDTO = new ArrayList<>();
+        for(Department dep : departments){
+            departmentDTO.add(dep.convertToDepartmentDTO());
+        }
+        return departmentDTO;
     }
 
-    @Transactional
-    @Override
-    public List<String> findAllName() {
-         List<Department> ld = departmentRepository.findAll();
-         List<String> depNames = new ArrayList<>();
-         for(Department d : ld){
-             depNames.add(d.getDepName());
-         }
-        return depNames;
-    }
-    @Transactional
-    @Override
-    public void saveDep(List<Department> d) {
-        departmentRepository.saveAll(d);
-    }
+
 
     public DepartmentServiceImpl() {
     }
 
-    public DepartmentRepository getDepartmentRepository() {
-        return departmentRepository;
-    }
-
-    public void setDepartmentRepository(DepartmentRepository departmentRepository) {
-        this.departmentRepository = departmentRepository;
-    }
 }
+

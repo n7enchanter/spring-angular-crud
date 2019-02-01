@@ -23,27 +23,21 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    public EmployeeService getEmployeeService() {
-        return employeeService;
-    }
 
-    public void setEmployeeService(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
-
+   
     @GetMapping("employees/")
-    public List<Employee> getEmployees(){
+    public List<EmployeeDTO> getEmployees(){
         return employeeService.findAll();
     }
 
     @GetMapping("employee/{id}")
-    public Optional<Employee> getById(@PathVariable("id") Integer id){
+    public EmployeeDTO getById(@PathVariable("id") Integer id){
         return employeeService.getById(id);
     }
 
     @PostMapping(value = "employee/add")
-    public void addEmployee(@RequestBody Employee employee) {
-        employeeService.save(employee);
+    public void addEmployee(@RequestBody EmployeeDTO employeeDTO) {
+        employeeService.save(employeeDTO);
     }
 
     @DeleteMapping("employee/{id}")
@@ -52,7 +46,7 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "employee/search/{name}")
-    public List<Employee> searchByName(@PathVariable(value = "name") String empName){
+    public List<EmployeeDTO> searchByName(@PathVariable(value = "name") String empName){
 
         return  employeeService.searchByName(empName);
     }

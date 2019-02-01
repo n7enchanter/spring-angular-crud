@@ -1,5 +1,7 @@
 package com.ukeess.springcrud.entity;
 
+import com.ukeess.springcrud.dto.EmployeeDTO;
+
 import javax.persistence.*;
 
 @Entity
@@ -58,5 +60,20 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public EmployeeDTO convertToEmployeeDTO(){
+        EmployeeDTO empDTO = new EmployeeDTO();
+        if (empID!=null){
+            empDTO.setEmpID(empID);
+        }
+        if(empName!=null){
+            empDTO.setEmpName(empName);
+        }
+        empDTO.setEmpActive(empActive);
+        if(department!=null){
+            empDTO.setDepartment(department.convertToDepartmentDTO());
+        }
+        return empDTO;
     }
 }

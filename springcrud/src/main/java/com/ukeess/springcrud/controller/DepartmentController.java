@@ -19,7 +19,7 @@ public class DepartmentController {
 
 
     @GetMapping("departments")
-    public List<Department> getDepartments(){
+    public List<DepartmentDTO> getDepartments(){
         return departmentService.findAll();
     }
 

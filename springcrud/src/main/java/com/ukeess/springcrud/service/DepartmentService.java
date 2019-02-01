@@ -9,7 +9,4 @@ import java.util.List;
 
 public interface DepartmentService {
    List<Department> findAll();
-   List<String> findAllName();
-   void saveDep(List<Department> d);
-
 }

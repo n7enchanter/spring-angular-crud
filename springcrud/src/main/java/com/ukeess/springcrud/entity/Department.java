@@ -1,6 +1,7 @@
 package com.ukeess.springcrud.entity;
 
 import com.fasterxml.jackson.annotation.*;
+import com.ukeess.springcrud.dto.DepartmentDTO;
 
 import javax.persistence.*;
 import java.util.List;
@@ -48,5 +49,15 @@ public class Department {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+    public DepartmentDTO convertToDepartmentDTO(){
+        DepartmentDTO depDTO = new DepartmentDTO();
+        if(depID!=null){
+            depDTO.setDepID(depID);
+        }
+        if(depName!=null){
+            depDTO.setDepName(depName);
+        }
+        return depDTO;
     }
 }
