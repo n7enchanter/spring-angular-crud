@@ -1,5 +1,6 @@
 package com.ukeess.springcrud.controller;
 
+import com.ukeess.springcrud.dto.DepartmentDTO;
 import com.ukeess.springcrud.entity.Department;
 import com.ukeess.springcrud.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,5 @@ public class DepartmentController {
     public List<DepartmentDTO> getDepartments(){
         return departmentService.findAll();
     }
-
-
-
 
 }

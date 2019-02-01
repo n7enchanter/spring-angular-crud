@@ -1,6 +1,7 @@
 package com.ukeess.springcrud.controller;
 
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.ukeess.springcrud.dto.EmployeeDTO;
 import com.ukeess.springcrud.entity.Department;
 import com.ukeess.springcrud.entity.Employee;
 import com.ukeess.springcrud.service.DepartmentService;
@@ -24,7 +25,6 @@ public class EmployeeController {
     EmployeeService employeeService;
 
 
-   
     @GetMapping("employees/")
     public List<EmployeeDTO> getEmployees(){
         return employeeService.findAll();

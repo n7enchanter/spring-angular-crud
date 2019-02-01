@@ -14,4 +14,3 @@ public interface EmployeeService {
     List<EmployeeDTO> searchByName(String empName);
     EmployeeDTO getById(Integer id);
 }
-
