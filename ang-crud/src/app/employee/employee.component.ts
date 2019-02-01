@@ -39,4 +39,9 @@ export class EmployeeComponent implements OnInit, OnChanges {
   editEmployee(id: number) {
     this.EditEvent.emit(id);
   }
+
+  updateManualPage(index) {
+    this.paginator.pageIndex = index;
+    this.ngOnInit();
+  }
 }

@@ -47,5 +47,12 @@
   </tr>
 </table>
 
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<div class="mat-paginator">
+  <div class="row d-flex">
+    <div style="  position: absolute;right: 0;">
+      <p *ngFor="let in of ' '.repeat(paginator.getNumberOfPages()).split(''), let x = index" (click)="updateManualPage(x)" class="inl"> {{x + 1}}</p>
+    </div>
+  </div>
+<mat-paginator [pageSizeOptions]="[10, 25, 100]" style="margin-top: 20px;"></mat-paginator>
+</div>
 
